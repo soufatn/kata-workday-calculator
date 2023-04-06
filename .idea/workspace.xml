@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff7ae806-e7be-4c06-a2bb-1d16dc4eff4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/neosoft/kata/WorkdayCalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/neosoft/kata/WorkdayHoursCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/neosoft/kata/WorkdayHoursCalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/neosoft/kata/WorkdayCalculatorTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,12 @@
     "last_opened_file_path": "C:/Users/soufa/Documents/workspace/cars"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.neosoft.kata" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WorkdayHoursCalculatorTest">
     <configuration name="WorkdayCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="workday-calculator" />
       <extension name="coverage">
@@ -58,6 +64,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.neosoft.kata" />
       <option name="MAIN_CLASS_NAME" value="org.neosoft.kata.WorkdayCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkdayHoursCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="workday-calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.neosoft.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.neosoft.kata" />
+      <option name="MAIN_CLASS_NAME" value="org.neosoft.kata.WorkdayHoursCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WorkdayHoursCalculatorTest" />
         <item itemvalue="JUnit.WorkdayCalculatorTest" />
       </list>
     </recent_temporary>
