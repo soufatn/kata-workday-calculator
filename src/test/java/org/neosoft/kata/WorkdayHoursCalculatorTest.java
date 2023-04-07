@@ -13,7 +13,7 @@ public class WorkdayHoursCalculatorTest {
 
     @Test
     void testCalculateWorkdayHoursTest() throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.FRENCH);
+        SimpleDateFormat formatter = WorkdayHoursCalculator.dateFormatter;
         final Date startDate = formatter.parse("2023-03-31T13:00:00Z");
         final Date endDate = formatter.parse("2023-04-04T12:00:00Z");
 
