@@ -69,27 +69,8 @@ public class WorkdayHoursCalculator {
         Date startDate = startCal.getTime();
         Date endDate = endCal.getTime();
 
-        Calendar startWorkdayCal = Calendar.getInstance();
-        Calendar endWorkdayCal = Calendar.getInstance();
-
-        try {
-            startDayTime = timeFormatter.parse("09:00");
-            endDayTime = timeFormatter.parse("18:00");
-        } catch (ParseException e) {
-            e.printStackTrace();
-            throw new IllegalArgumentException(e.getMessage());
-        }
-
-        startWorkdayCal.setTime(startDayTime);
-        endWorkdayCal.setTime(endDayTime);
-
-        startWorkdayCal.set(Calendar.YEAR, startCal.get(Calendar.YEAR));
-        startWorkdayCal.set(Calendar.MONTH, startCal.get(Calendar.MONTH));
-        startWorkdayCal.set(Calendar.DATE, startCal.get(Calendar.DATE));
-
-        endWorkdayCal.set(Calendar.YEAR, startCal.get(Calendar.YEAR));
-        endWorkdayCal.set(Calendar.MONTH, startCal.get(Calendar.MONTH));
-        endWorkdayCal.set(Calendar.DATE, startCal.get(Calendar.DATE));
+        Calendar startWorkdayCal = setWorkDayCalendarTime(startCal, "09:00");
+        Calendar endWorkdayCal = setWorkDayCalendarTime(startCal, "18:00");
 
         Date startWorkdayDate = startWorkdayCal.getTime();
         Date endWorkdayDate = endWorkdayCal.getTime();
@@ -105,6 +86,25 @@ public class WorkdayHoursCalculator {
         Date date = startCal.getTime();
 
         return (date.equals(startWorkdayDate) || date.after(startWorkdayDate)) && date.before(endWorkdayDate);
+    }
+
+    private Calendar setWorkDayCalendarTime(Calendar startCal, String dateTime) {
+        Date dayTime;
+        Calendar workdayCal = Calendar.getInstance();
+        try {
+            dayTime = timeFormatter.parse(dateTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException(e.getMessage());
+        }
+        workdayCal.setTime(dayTime);
+
+        List<Integer> fields = Arrays.asList(Calendar.YEAR, Calendar.MONTH, Calendar.DATE);
+
+        for (int field : fields) {
+            workdayCal.set(field, startCal.get(field));
+        }
+        return workdayCal;
     }
 
 }
