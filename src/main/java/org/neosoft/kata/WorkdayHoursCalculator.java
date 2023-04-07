@@ -65,7 +65,6 @@ public class WorkdayHoursCalculator {
      * @return <code>true</code> if the {#startDate} is in the working hour of weekdays.
      */
     private boolean isWorkingHour(Calendar startCal, Calendar endCal) {
-        Date startDayTime, endDayTime;
         Date startDate = startCal.getTime();
         Date endDate = endCal.getTime();
 
@@ -83,9 +82,7 @@ public class WorkdayHoursCalculator {
             endWorkdayDate = endDate;
         }
 
-        Date date = startCal.getTime();
-
-        return (date.equals(startWorkdayDate) || date.after(startWorkdayDate)) && date.before(endWorkdayDate);
+        return (startDate.equals(startWorkdayDate) || startDate.after(startWorkdayDate)) && startDate.before(endWorkdayDate);
     }
 
     private Calendar setWorkDayCalendarTime(Calendar startCal, String dateTime) {
